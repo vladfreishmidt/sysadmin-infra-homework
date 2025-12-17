@@ -40,3 +40,8 @@ curl http://localhost:8080/healthz
 ## Useful Links
 - Full task description: [INSTRUCTIONS.md](./INSTRUCTIONS.md)
 - Solution rationale: `Decisions.md`
+
+## Implementation Notes
+- Started: Wed Dec 17 11:40:23 AM UTC 2025
+- Environment: Ubuntu 24.04 Desktop (Home Lab node)
+- Hardware: Ryzen 6-core, 16GB RAM
