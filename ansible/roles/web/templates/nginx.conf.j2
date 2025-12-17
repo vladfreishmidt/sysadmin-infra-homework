@@ -1,1 +1,31 @@
-# TODO
+server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+
+    server_name _;
+    root /var/www/html;
+    index index.php index.html;
+
+    access_log /var/log/nginx/access.log;
+    error_log /var/log/nginx/error.log;
+
+    location / {
+        try_files $uri $uri/ /index.php?$query_string;
+    }
+
+    location ~ \.php$ {
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass unix:/run/php/php8.3-fpm.sock;
+        fastcgi_param APP_ENV {{ app_env | default('dev') }};
+    }
+
+    location ~ /\.ht {
+        deny all;
+    }
+
+    # Health check endpoint - no access logs
+    location = /healthz {
+        access_log off;
+        try_files $uri /index.php?$query_string;
+    }
+}
