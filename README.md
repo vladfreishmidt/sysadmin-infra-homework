@@ -156,6 +156,44 @@ sudo ansible-playbook playbooks/site.yml
 
 Both workflows run automatically on push and pull requests.
 
+### GitHub Actions - All Workflows Passing
+
+#### GitHub Actions Overview 
+
+<img width="1903" height="791" alt="GitHub Actions Overview" src="https://github.com/user-attachments/assets/40fc0f72-f4be-481c-857a-96c7db6419b3" />
+
+*Both Terraform and Ansible workflows passing validation.*
+
+### Terraform Workflow Details
+
+<img width="1902" height="698" alt="Terraform Workflow Details" src="https://github.com/user-attachments/assets/cf880ffa-2d9b-4cce-b79f-8e4cfc72987b" />
+
+<img width="1904" height="796" alt="Terraform Workflow Details" src="https://github.com/user-attachments/assets/8ce4356b-9c4e-4b09-be55-b07dfdbea61a" />
+
+*Format check, validation, plan generation with artifact upload.*
+
+### Ansible Workflow Details
+
+<img width="1902" height="614" alt="Ansible Workflow Details" src="https://github.com/user-attachments/assets/27e676a0-857e-4f3c-ad17-e8e5902f16b6" />
+
+<img width="1904" height="548" alt="Ansible Workflow Details" src="https://github.com/user-attachments/assets/a3c88830-6fa1-416d-ba65-63be5002e609" />
+
+*Ansible-lint and syntax validation passing.*
+
+### Health Check Response
+
+<img width="1608" height="701" alt="Health Check Response" src="https://github.com/user-attachments/assets/dbe938d1-dd95-4b10-88c3-9404e98d33c6" />
+
+*curl http://localhost:8080/healthz returns expected JSON.*
+
+### Running Containers
+
+<img width="1608" height="1040" alt="Running Containers" src="https://github.com/user-attachments/assets/8e6c8a7e-db92-4e40-b266-a038ff0c6159" />
+
+<img width="1608" height="313" alt="Running Containers" src="https://github.com/user-attachments/assets/76672eff-5901-4232-bb95-0d72d6f577d2" />
+
+*Both nginx and php-fpm containers running with correct ports.*
+
 ---
 
 ## Useful Links
